@@ -1,0 +1,57 @@
+\section{Forward-Backward}
+\begin{frame}
+\begin{itemize}
+	\item Given a sequence of observations $O = O_1, O_2 \text{ ... } O_t$, \\
+	      the model moves through states $S = s_1, s_2 \text{ ... } s_t$ \\ 
+	\item Forward variable
+
+		$$\alpha_t(i) = Pr(O_1, O_2 \text{ ... } O_t, s_t = q_i \vert \lambda)$$
+
+	\item Backward variable
+
+		$$\beta_t(i) = Pr(O_{t+1}, O_{t+2} \text{ ... } O_T \vert s_t = q_i, \lambda)$$ 
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+Forward variable
+\begin{center}
+	\begin{enumerate}
+		\item $\alpha_1(i) = \pi_ib_i(O_1)$ for $1 \leq i \leq N$
+		\item for $t = 1 ... T-1$ and $1 \leq i \leq N$
+
+			$$\alpha_{t+1}(i) = \begin{bmatrix} \sum_{j=1}^N\alpha_t(j)a_{ji} \end{bmatrix} b_i(O_{t+1})$$
+
+		\item then $Pr(O | \lambda) = \sum_{i=1}^N\alpha_T(i)$
+	\end{enumerate}
+\end{center}
+\end{frame}
+
+\begin{frame}
+Backward variable
+\begin{center}
+	\begin{enumerate}
+		\item $\beta_T(i) = 1$ for $1 \leq i \leq N$ \\
+		\item for $t = T-1, T-2 \text{ ... } 1$ and $1 \leq i \leq N$
+			$$\beta_t(i) = \sum_{j=1}^N a_{ij}b_j(O_{t+1})\beta_{t+1}(j)$$
+
+	\end{enumerate}
+\end{center}
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
