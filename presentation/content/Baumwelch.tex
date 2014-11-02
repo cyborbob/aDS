@@ -1,13 +1,18 @@
 \section{Baum-Welch Algorithm}
 \begin{frame}
-
 \begin{itemize}
-	\item $\gamma_t(i) = Pr(s_t = q_i \vert O, \lambda)$ \\
+\item Probability of being in state $q_i$ at time $t$
+\begin{align*}
+  	\gamma_t(i) &= Pr(s_t = q_i \vert O, \lambda) \\ \\
+		    &= \frac{\alpha_t(i)\beta_t(i)}{Pr(O \vert \lambda)} 
+\end{align*}  
 
-
+\item Probability of transitioning from state $q_i$ to $q_j$ at time $t$
+\begin{align*}
+	\xi_t(i,j) &= Pr(s_t = q_i, s_{t+1} = q_j \vert O, \lambda) \\ \\
+                        &= \frac{\alpha_t(i)a_{ij}b_j(O_{t+1})\beta_{t+1}(j)}{Pr(O \vert \lambda)} 
+\end{align*}
 \end{itemize}
-
-
 \end{frame}
 
 
@@ -18,6 +23,9 @@
 
 
 \begin{frame}
+$$ \bar{\pi_i} = \gamma_1(i)$$
+
+
 
 \end{frame}
 
