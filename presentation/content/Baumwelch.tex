@@ -15,17 +15,26 @@
 \end{itemize}
 \end{frame}
 
-
-
-
-
-
-
-
 \begin{frame}
-$$ \bar{\pi_i} = \gamma_1(i)$$
 
+\begin{itemize}
+\item Initial state distribution 
+$$ \bar{\pi}_i &= \gamma_1(i)$$ 
+%$$ \bar{a}_{ij} = \frac{\sum_{t=1}^{T-1} \xi(i,j)}{\sum_{t=1}^{T-1}\gamma_t(i)}$$ 
+\item Transition Probabilities 
+$$ \bar{a}_{ij} = \sum_{t=1}^{T-1} \xi(i,j) / \sum_{t=1}^{T-1}\gamma_t(i)$$ 
+%$$ \bar{b}_j(k) = \frac{\sum_{t=1 \wedge O_t=k}^{T} \gamma_t(j)}{\sum_{t=1}^{T} \gamma_t(j)}$$
+\item Emission Probabilities 
+$$ \bar{b}_j(k) = \sum_{t=1 \wedge O_t=k}^{T} \gamma_t(j) / \sum_{t=1}^{T} \gamma_t(j)$$
+\end{itemize}
 
+%\begin{align*}
+
+%\item \bar{\pi}_i &= \gamma_1(i) \\
+%\item \bar{a}_{ij} &= \sum_{t=1}^{T-1} \xi(i,j) / \sum_{t=1}^{T-1}\gamma_t(i) \\ 
+%\item \bar{b}_j(k) &= \sum_{t=1 \wedge O_t=k}^{T} \gamma_t(j) / \sum_{t=1}^{T} \gamma_t(j)
+
+%\end{align*}
 
 \end{frame}
 
