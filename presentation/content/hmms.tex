@@ -27,18 +27,18 @@
 
 \begin{frame}Hidden Markov Model
 	\begin{itemize}
-		\item $T$ = length of observation sequence
+		\item $T$ = length of observed sequence
 		\item $N$ = number of states in the model
-		\item $M$ = number of observation symbols
+		\item $M$ = number of observable symbols
 		\item $Q$ = \{$q_1, q_2,...,q_N$\}, states
 		\item $V$ = \{$v_1, v_2,...,v_M$\}, \\
-		observation symbols
+		observable symbols
 		\item $A$ = \{$a_{ij}$\}, $a_{ij}$ = $Pr(q_j$, at $t + 1 | q_i$ at $t)$, \\
 		state transition probability distribution
 		\item $B$ = \{$b_j(k)$\}, $b_j(k)$ = $Pr(v_k$ at $t  | q_j$ at $t)$, \\
 		observation symbol probability distribution
 		\item $\pi$ = \{$\pi_i$\}, $\pi_i$ = $Pr(q_i$ at $t = 0)$, \\
-		initial state distribution
+		initial state probability distribution
 		\item $\lambda$ = ($A$, $B$, $\pi$), the HMM
 	\end{itemize}
 	
